@@ -1,0 +1,1784 @@
+[
+  {
+    "day": 1,
+    "date": "2026-07-25",
+    "week": 1,
+    "phase": "P1 · Foundation",
+    "title": "Linux Setup + Terminal Basics",
+    "target": "KICKOFF: WSL2/Ubuntu VM setup + terminal basics (pwd, ls, cd, mkdir, cp, mv, rm) — linuxcommand.org Ch 1-4. Khud ka 20-command cheatsheet banao",
+    "time": "3-4 hr",
+    "subtopics": [
+      "WSL2 install on Windows aur Ubuntu setup",
+      "pwd, ls, cd — navigation commands",
+      "mkdir, cp, mv, rm — file operations",
+      "Absolute vs relative paths ka difference",
+      "man pages se documentation padhna"
+    ],
+    "depth": "Commands ratta nahi — har command 5-10 baar khud type karo. Flags me sirf common wale (-l, -a, -r) tak jao, obscure flags skip.",
+    "resources": [
+      "linuxcommand.org Ch 1-4 (The Linux Command Line)"
+    ],
+    "deliverable": "20-command cheatsheet file banao khud ke words me, GitHub pe upload"
+  },
+  {
+    "day": 2,
+    "date": "2026-07-26",
+    "week": 1,
+    "phase": "P1 · Foundation",
+    "title": "File Permissions + Linux Structure",
+    "target": "File permissions (chmod, chown) + users/groups + Linux folder structure (/etc, /var, /home). 10 permission tasks practice. LinkedIn Day-1 post: 84-day DevOps grind shuru",
+    "time": "3-4 hr",
+    "subtopics": [
+      "chmod numeric (755, 644) aur symbolic (u+x) notation",
+      "chown se file owner change karna",
+      "/etc, /var, /home, /usr folder ka kaam",
+      "useradd, groupadd, id commands",
+      "Permission tasks: read-only file banana, executable script set karna"
+    ],
+    "depth": "chmod ke numeric notation (755, 644) yaad karo — yeh sabse common hain. Symbolic notation samjho lekin thoda kam use hota hai. /proc aur /sys abhi skip karo.",
+    "resources": [
+      "linuxcommand.org Ch 9-10 (Permissions)"
+    ],
+    "deliverable": "10 permission tasks ka screenshot ya terminal output save karo, LinkedIn post schedule karo"
+  },
+  {
+    "day": 3,
+    "date": "2026-07-27",
+    "week": 1,
+    "phase": "P1 · Foundation",
+    "title": "Text Processing Tools",
+    "target": "Text tools: cat, less, head, tail, grep. Kisi real log file pe grep practice karo (office ke Datadog agent logs perfect hain)",
+    "time": "1-2 hr",
+    "subtopics": [
+      "cat, less, head, tail se file content dekhna",
+      "grep basic pattern matching (-i case insensitive, -n line number)",
+      "grep -r recursive search in directory",
+      "tail -f se live log monitoring",
+      "Real Datadog agent log file pe grep se ERROR/WARN filter karna"
+    ],
+    "depth": "grep ke basic flags (-i, -n, -r, -v) seekho — yeh daily kaam aata hai. Regex patterns abhi skip karo, sirf literal string search karo. tail -f bahut useful hai live logs ke liye.",
+    "resources": [
+      "linuxcommand.org Ch 19 (Text Processing)"
+    ],
+    "deliverable": "5 useful grep one-liners ek .sh file me save karo jaise grep-cheatsheet.sh"
+  },
+  {
+    "day": 4,
+    "date": "2026-07-28",
+    "week": 1,
+    "phase": "P1 · Foundation",
+    "title": "Pipes, Redirection + One-Liners",
+    "target": "Pipes & redirection: |, >, >>, 2>&1, xargs. 5 kaam ke one-liners likh ke save karo",
+    "time": "1-2 hr",
+    "subtopics": [
+      "| (pipe) se commands chain karna",
+      "> aur >> se output file me likhna",
+      "2>&1 se stderr stdout ke saath redirect karna",
+      "xargs se piped input ko argument me convert karna",
+      "wc -l se line count, sort, uniq combination"
+    ],
+    "depth": "Pipe ka concept ache se samjho — yeh Linux ka superpower hai. 2>&1 ka use production scripts me bahut hota hai. xargs thoda confusing lagega, basic use hi karo abhi.",
+    "resources": [
+      "linuxcommand.org Ch 6 (Redirection)"
+    ],
+    "deliverable": "5 useful one-liners ka oneliner.sh file banao with comments explaining each"
+  },
+  {
+    "day": 5,
+    "date": "2026-07-29",
+    "week": 1,
+    "phase": "P1 · Foundation",
+    "title": "Process Management",
+    "target": "Processes: ps, top, htop, kill, systemctl, journalctl. Ek service start/stop/status karke dekho",
+    "time": "1-2 hr",
+    "subtopics": [
+      "ps aux se running processes list karna",
+      "top/htop se CPU/memory usage dekhna",
+      "kill aur kill -9 me difference",
+      "systemctl start/stop/status/enable kisi service pe",
+      "journalctl -u <service> se service logs dekhna"
+    ],
+    "depth": "ps aux aur systemctl roz kaam aate hain DevOps me. kill -9 force kill hai — pehle regular kill try karo. journalctl ka use Datadog ke context me bahut useful hoga.",
+    "resources": [
+      "linuxcommand.org Ch 10 (Processes)"
+    ],
+    "deliverable": "Ek service (jaise nginx ya ssh) start/stop/status karke output screenshot lo"
+  },
+  {
+    "day": 6,
+    "date": "2026-07-30",
+    "week": 1,
+    "phase": "P1 · Foundation",
+    "title": "Vim Survival Skills",
+    "target": "vim survival mode: vimtutor complete karo (i, esc, :wq, dd, yy, p, /search)",
+    "time": "1-2 hr",
+    "subtopics": [
+      "Normal vs Insert vs Command mode",
+      "i (insert), Esc (normal mode) navigation",
+      ":wq save aur quit, :q! force quit",
+      "dd (line delete), yy (yank/copy), p (paste)",
+      "/pattern se text search karna"
+    ],
+    "depth": "Sirf survival commands seekho — production me config file edit karna ho toh kaam aaye. Advanced vim (macros, splits) abhi skip karo. vimtutor pura karo, 30-40 min lagenge.",
+    "resources": [
+      "vimtutor (terminal me type karo)"
+    ],
+    "deliverable": "vimtutor complete karo aur ek config file vim se edit karke save karo as proof"
+  },
+  {
+    "day": 7,
+    "date": "2026-07-31",
+    "week": 1,
+    "phase": "P1 · Foundation",
+    "title": "Week 1 Revision + Self-Quiz",
+    "target": "Week-1 revision + 20 sawal ka self-quiz + Idea Parking Lot review (15 min MAX — passive income ideas yahan aake marte hain)",
+    "time": "1 hr",
+    "subtopics": [
+      "Linux commands revision — permissions, pipes, grep",
+      "20-question self-quiz banao aur do",
+      "Week 1 notes me gaps identify karo",
+      "Idea Parking Lot: side ideas likh ke park karo, 15 min max",
+      "Day 8 ke liye shell scripting prep"
+    ],
+    "depth": "Revision me notes mat padho — command line pe test karo. Agar koi command yaad nahi toh dobara practice karo. Idea Parking Lot strictly 15 min — focus DevOps pe rakho.",
+    "resources": [
+      "linuxcommand.org Ch 1-4 (quick review)"
+    ],
+    "deliverable": "20-question quiz ke answers ek file me, wrong answers highlight karo"
+  },
+  {
+    "day": 8,
+    "date": "2026-08-01",
+    "week": 2,
+    "phase": "P1 · Foundation",
+    "title": "Shell Scripting Basics",
+    "target": "Shell scripting start: variables, if/else, loops. Script #1: disk usage alert script banao",
+    "time": "3-4 hr",
+    "subtopics": [
+      "Variables declare karna: NAME=value, $NAME use karna",
+      "if/elif/else conditional logic",
+      "for loop aur while loop",
+      "df -h se disk usage check karna",
+      "Script ko executable banana (chmod +x) aur run karna"
+    ],
+    "depth": "Script ke andar spacing matter karta hai — if ke baad space daalo. Variable assignment me space nahi: NAME=value (NAME = value galat hai). Disk alert script real-world useful hai — production me yehi kaam aata hai.",
+    "resources": [
+      "linuxcommand.org Ch 24-26 (Shell Scripting)"
+    ],
+    "deliverable": "disk-alert.sh script jo 80% disk usage pe 'ALERT' print kare — GitHub pe push karo"
+  },
+  {
+    "day": 9,
+    "date": "2026-08-02",
+    "week": 2,
+    "phase": "P1 · Foundation",
+    "title": "Functions + Exit Codes + Log Parser",
+    "target": "Functions, arguments ($1, $#), exit codes. Script #2: log parser (error count nikalo). LinkedIn post #2",
+    "time": "3-4 hr",
+    "subtopics": [
+      "Function define karna aur call karna in bash",
+      "$1, $2, $# se script arguments handle karna",
+      "exit codes: 0 = success, non-zero = failure",
+      "$? se last command exit code check karna",
+      "grep -c se log file me error count nikalna"
+    ],
+    "depth": "Exit codes bahut important hain CI/CD me — agar script fail ho toh pipeline rukni chahiye. $1 se arguments lena seekho, isse scripts reusable bante hain.",
+    "resources": [
+      "linuxcommand.org Ch 26-27 (Functions)"
+    ],
+    "deliverable": "log-parser.sh jo kisi log file me ERROR count karke print kare, GitHub push + LinkedIn post"
+  },
+  {
+    "day": 10,
+    "date": "2026-08-03",
+    "week": 2,
+    "phase": "P1 · Foundation",
+    "title": "Cron + Task Scheduling",
+    "target": "cron + crontab: apni disk script schedule karo. systemd timers bhi dekho",
+    "time": "1-2 hr",
+    "subtopics": [
+      "crontab -e se cron job add karna",
+      "Cron syntax: minute hour day month weekday",
+      "Common patterns: * * * * * (every min), 0 * * * * (hourly)",
+      "crontab -l se existing jobs list karna",
+      "systemd timer unit ka basic concept"
+    ],
+    "depth": "Cron syntax thoda tricky lagti hai — crontab.guru website use karo syntax verify karne ke liye. systemd timers sirf concept level tak samjho, cron abhi zyada important hai beginner ke liye.",
+    "resources": [
+      "linuxcommand.org Ch 10 (Scheduling)"
+    ],
+    "deliverable": "disk-alert.sh ko har 5 minute pe run hone wala cron job set karo, crontab -l output save karo"
+  },
+  {
+    "day": 11,
+    "date": "2026-08-04",
+    "week": 2,
+    "phase": "P1 · Foundation",
+    "title": "File Archiving + Backup Script",
+    "target": "find, tar, gzip, rsync. Script #3: backup script banao",
+    "time": "1-2 hr",
+    "subtopics": [
+      "find command se files search karna (-name, -type, -mtime)",
+      "tar -czf se archive banana aur tar -xzf se extract karna",
+      "gzip se file compress/decompress karna",
+      "rsync -av se local to remote sync karna",
+      "Backup script jo timestamp ke saath archive banaye"
+    ],
+    "depth": "tar flags yaad karo: c=create, x=extract, z=gzip, f=filename, v=verbose. rsync DevOps me server backup ke liye use hota hai — basics samjho. find ke complex expressions abhi skip karo.",
+    "resources": [
+      "linuxcommand.org Ch 18 (Archiving)"
+    ],
+    "deliverable": "backup.sh script jo /home directory ko timestamped tar.gz me compress kare — GitHub push"
+  },
+  {
+    "day": 12,
+    "date": "2026-08-05",
+    "week": 2,
+    "phase": "P1 · Foundation",
+    "title": "sed + awk Log Processing",
+    "target": "sed + awk basics: log processing ke 5 practical one-liners",
+    "time": "1-2 hr",
+    "subtopics": [
+      "sed s/old/new/g se text replace karna",
+      "sed -n '1,10p' se specific lines print karna",
+      "awk '{print $1, $3}' se specific columns nikalna",
+      "awk '/ERROR/ {count++} END {print count}' pattern",
+      "Log file se IP addresses ya timestamps extract karna"
+    ],
+    "depth": "sed aur awk bahut powerful hain lekin complex syntax hai — sirf 5-6 most common patterns yaad karo. Ek-ek command pe 10 min deke khud try karo real logs pe. Deep dive mat karo abhi.",
+    "resources": [
+      "linuxcommand.org Ch 20 (Text Processing)"
+    ],
+    "deliverable": "5 sed/awk one-liners ka file banao with explanation comments — practical log use cases"
+  },
+  {
+    "day": 13,
+    "date": "2026-08-06",
+    "week": 2,
+    "phase": "P1 · Foundation",
+    "title": "SSH Keys + Remote Access",
+    "target": "SSH deep: keys banao, ssh-copy-id, scp, ~/.ssh/config. Passwordless login setup",
+    "time": "1-2 hr",
+    "subtopics": [
+      "ssh-keygen se RSA/Ed25519 key pair banana",
+      "ssh-copy-id se public key remote server pe copy karna",
+      "scp se files remote server pe transfer karna",
+      "~/.ssh/config me Host alias set karna",
+      "Passwordless SSH login verify karna"
+    ],
+    "depth": "SSH keys DevOps me har jagah use hote hain — GitHub, servers, CI/CD. Ed25519 use karo RSA se — zyada secure hai. ~/.ssh/config me aliases set karo, bahut time bachega.",
+    "resources": [
+      "linuxcommand.org Ch 17 (SSH)"
+    ],
+    "deliverable": "Passwordless SSH setup karo kisi VM pe, ~/.ssh/config file GitHub pe push (private key nahi!)"
+  },
+  {
+    "day": 14,
+    "date": "2026-08-07",
+    "week": 2,
+    "phase": "P1 · Foundation",
+    "title": "Week 2 Revision + Bandit CTF",
+    "target": "Revision + OverTheWire Bandit game levels 0-5 (fun + real skills)",
+    "time": "1 hr",
+    "subtopics": [
+      "Shell scripting Week 2 concepts recap",
+      "Bandit Level 0: SSH se connect karna",
+      "Bandit Level 1-2: hidden files dhundna",
+      "Bandit Level 3-4: file permissions aur special chars",
+      "Bandit Level 5: find command use karna"
+    ],
+    "depth": "Bandit ek CTF (Capture The Flag) game hai — real Linux skills use karke puzzles solve karo. Hint dekhne se pehle 10 min khud try karo har level. Bahut fun aur learning bhi hogi.",
+    "resources": [
+      "OverTheWire Bandit (overthewire.org/wargames/bandit)"
+    ],
+    "deliverable": "Bandit levels 0-5 complete, har level ka password ek file me note karo (practice ke liye)"
+  },
+  {
+    "day": 15,
+    "date": "2026-08-08",
+    "week": 3,
+    "phase": "P1 · Foundation",
+    "title": "Networking Fundamentals",
+    "target": "Networking: IP/subnet basics, TCP vs UDP, ports. Commands: ip, ping, ss, dig, curl",
+    "time": "3-4 hr",
+    "subtopics": [
+      "IP address aur subnet mask concept (192.168.1.0/24)",
+      "TCP vs UDP: reliable vs fast, use cases",
+      "Well-known ports: 22 SSH, 80 HTTP, 443 HTTPS, 3306 MySQL",
+      "ip addr se network interfaces dekhna",
+      "ss -tuln se open ports list karna, dig se DNS lookup"
+    ],
+    "depth": "Subnetting ka complex math abhi skip karo — sirf /24 aur /16 ka concept samjho. Ports yaad karo: yeh interview me aur production troubleshooting me roz kaam aata hai. curl -v bahut useful hai API debug karne ke liye.",
+    "resources": [
+      "roadmap.sh/devops (Networking section)"
+    ],
+    "deliverable": "Networking commands cheatsheet: ip, ping, ss, dig, curl — 10 useful examples ke saath"
+  },
+  {
+    "day": 16,
+    "date": "2026-08-09",
+    "week": 3,
+    "phase": "P1 · Foundation",
+    "title": "DNS + HTTP + TLS Basics",
+    "target": "DNS + HTTP/HTTPS deep: status codes, headers, TLS basics. curl -v se explore. LinkedIn post #3",
+    "time": "3-4 hr",
+    "subtopics": [
+      "DNS resolution flow: browser se DNS server tak",
+      "HTTP status codes: 200, 301, 404, 500, 503",
+      "Request/response headers: Content-Type, Authorization, Cache-Control",
+      "TLS/SSL handshake ka high-level concept",
+      "curl -v se headers dekhna aur curl -I se HEAD request"
+    ],
+    "depth": "HTTP status codes ratta karo — 2xx success, 3xx redirect, 4xx client error, 5xx server error. TLS ke andar ka math skip karo — sirf HTTPS ka kaam samjho. curl -v Datadog troubleshooting me roz use hota hai.",
+    "resources": [
+      "roadmap.sh/devops (Networking section)"
+    ],
+    "deliverable": "curl se 5 different websites hit karo, status codes aur headers note karo — ek file me save + LinkedIn post"
+  },
+  {
+    "day": 17,
+    "date": "2026-08-10",
+    "week": 3,
+    "phase": "P1 · Foundation",
+    "title": "Git Basics + GitHub Setup",
+    "target": "Git basics: init, add, commit, log, diff. GitHub profile polish karo",
+    "time": "1-2 hr",
+    "subtopics": [
+      "git init se repository banana",
+      "git add, git commit -m ka workflow",
+      "git log se commit history dekhna",
+      "git diff se changes dekhna (staged vs unstaged)",
+      "GitHub profile: bio, pinned repos, README.md banana"
+    ],
+    "depth": "Git commit message clear likhna seekho — 'fix stuff' mat likho, 'fix: disk alert script threshold' likho. GitHub profile recruiter dekhta hai — ache se polish karo.",
+    "resources": [
+      "learngitbranching.js.org (Introduction sequence)"
+    ],
+    "deliverable": "GitHub profile polish karo, README.md me apna DevOps journey mention karo — live URL share karo"
+  },
+  {
+    "day": 18,
+    "date": "2026-08-11",
+    "week": 3,
+    "phase": "P1 · Foundation",
+    "title": "Git Branching + Merge Conflicts",
+    "target": "Git branching: branch, merge, conflict resolve — 3 baar practice (learngitbranching.js.org)",
+    "time": "1-2 hr",
+    "subtopics": [
+      "git branch se new branch banana, git checkout se switch karna",
+      "git merge se branches merge karna",
+      "Merge conflict kab hota hai aur kaise dikhta hai",
+      "Conflict resolve karna: <<<< ==== >>>> markers samjho",
+      "learngitbranching.js.org pe visual branching practice"
+    ],
+    "depth": "Merge conflicts se mat daro — yeh normal hai. Conflict markers ache se samjho. learngitbranching.js.org ka visual interface branching samjhne ke liye best hai — pura Main sequence karo.",
+    "resources": [
+      "learngitbranching.js.org (Main sequence)"
+    ],
+    "deliverable": "learngitbranching.js.org Main sequence complete karo — screenshot lo completion ka"
+  },
+  {
+    "day": 19,
+    "date": "2026-08-12",
+    "week": 3,
+    "phase": "P1 · Foundation",
+    "title": "GitHub Flow + First Public Repo",
+    "target": "GitHub flow: fork, PR, push/pull, .gitignore. Apna Linux cheatsheet repo PUBLIC karo — pehla repo!",
+    "time": "1-2 hr",
+    "subtopics": [
+      "git push origin main aur git pull se sync karna",
+      "Fork karna aur PR (Pull Request) banana",
+      ".gitignore file me patterns — *.env, node_modules/",
+      "GitHub ke through PR review aur merge process",
+      "Linux cheatsheet repo public karna with good README"
+    ],
+    "depth": ".gitignore bahut important hai — secrets aur build files kabhi commit mat karo. PR create karna professional workflow hai — yehi companies me hota hai. README me project explain karo clearly.",
+    "resources": [
+      "learngitbranching.js.org (Remote sequence)"
+    ],
+    "deliverable": "Linux cheatsheet repo public GitHub pe — link LinkedIn pe share karo"
+  },
+  {
+    "day": 20,
+    "date": "2026-08-13",
+    "week": 3,
+    "phase": "P1 · Foundation",
+    "title": "Linux Security Basics",
+    "target": "Linux security basics: ufw firewall, sudo config, fail2ban concept. Phase-1 gaps list banao",
+    "time": "1-2 hr",
+    "subtopics": [
+      "ufw enable, ufw allow 22, ufw status verbose",
+      "sudo vs su — privilege escalation difference",
+      "/etc/sudoers me user permissions",
+      "fail2ban kya karta hai — brute force protection",
+      "Phase 1 gaps: kaunse topics weak hain list banao"
+    ],
+    "depth": "ufw ke saath production server pe pehle allow ssh karo PHIR enable karo — warna lock ho jaoge! fail2ban ka concept samjho lekin deep config abhi skip karo. Gaps list honest banao.",
+    "resources": [
+      "linuxcommand.org Ch 9 (Permissions aur security)"
+    ],
+    "deliverable": "Phase 1 gaps list markdown file banao — honest assessment, GitHub pe push karo"
+  },
+  {
+    "day": 21,
+    "date": "2026-08-14",
+    "week": 3,
+    "phase": "P1 · Foundation",
+    "title": "Phase 1 Checkpoint",
+    "target": "PHASE 1 CHECKPOINT: Bandit levels 5-10 + 30-question self-test. Pass = Phase 2 unlock!",
+    "time": "1 hr",
+    "subtopics": [
+      "Bandit levels 5-10: find, strings, xxd, base64 decode",
+      "30-question self-test: Linux commands, permissions, shell, networking, git",
+      "Weak areas identify karo",
+      "Phase 1 completion celebration — ek post worthy moment",
+      "Phase 2 preview: Docker aur CI/CD kya cover hoga"
+    ],
+    "depth": "30 questions me agar 70% se kam aya toh ek din aur lo weak topics pe. Phase 2 shuru karne se pehle foundation solid hona chahiye. Bandit levels khud solve karo — hints last option.",
+    "resources": [
+      "OverTheWire Bandit levels 5-10"
+    ],
+    "deliverable": "30-question self-test results note karo, score + weak areas — Phase 2 unlock celebration LinkedIn post"
+  },
+  {
+    "day": 22,
+    "date": "2026-08-15",
+    "week": 4,
+    "phase": "P2 · Docker+CI/CD",
+    "title": "Docker Fundamentals",
+    "target": "Docker start: image vs container, run/ps/stop/rm/exec/logs. Nginx container chala ke browser me dekho",
+    "time": "3-4 hr",
+    "subtopics": [
+      "Image vs container — template vs running instance",
+      "docker run -d -p 8080:80 nginx — detached mode aur port mapping",
+      "docker ps, docker ps -a — running aur stopped containers",
+      "docker exec -it container bash — container ke andar jaana",
+      "docker logs container — container output dekhna"
+    ],
+    "depth": "Container ek process hai — VM nahi. docker run har baar naya container banata hai. docker exec se running container me jaana seekho — yeh debugging ke liye critical hai. Play with Docker se practice karo free me.",
+    "resources": [
+      "Docker official docs 'Get Started' (docs.docker.com)",
+      "Play with Docker (labs.play-with-docker.com)"
+    ],
+    "deliverable": "Nginx container localhost:8080 pe run karo — browser screenshot lo"
+  },
+  {
+    "day": 23,
+    "date": "2026-08-16",
+    "week": 4,
+    "phase": "P2 · Docker+CI/CD",
+    "title": "First Dockerfile",
+    "target": "Pehla Dockerfile: FROM, COPY, RUN, CMD, EXPOSE. Simple app containerize karo. LinkedIn post #4",
+    "time": "3-4 hr",
+    "subtopics": [
+      "FROM instruction — base image choose karna",
+      "COPY src dest — files image me copy karna",
+      "RUN apt-get install ya pip install — build time commands",
+      "CMD vs ENTRYPOINT ka difference",
+      "EXPOSE port — documentation ke liye (actual binding nahi)"
+    ],
+    "depth": "CMD aur ENTRYPOINT confusing hai — CMD ko default argument samjho. RUN build time pe hota hai, CMD runtime pe. .dockerignore file zaroor banao — node_modules ya .git include mat karo.",
+    "resources": [
+      "Docker official docs 'Get Started' (docs.docker.com)"
+    ],
+    "deliverable": "Ek simple Python/Node app ka Dockerfile banao, image build karo, run karo — Docker Hub pe push + LinkedIn post"
+  },
+  {
+    "day": 24,
+    "date": "2026-08-17",
+    "week": 4,
+    "phase": "P2 · Docker+CI/CD",
+    "title": "Docker Images + Multi-stage Builds",
+    "target": "Image layers, tags, Docker Hub push. Multi-stage build intro",
+    "time": "1-2 hr",
+    "subtopics": [
+      "Docker layer caching — COPY aur RUN order matter karta hai",
+      "docker tag image-name username/repo:v1.0",
+      "docker push Docker Hub pe",
+      "Multi-stage Dockerfile: builder stage aur final stage",
+      "Multi-stage se image size reduce karna (100MB+ se 20MB)"
+    ],
+    "depth": "Layer caching ka fayda uthao — jo cheez kam change hoti hai usse pehle COPY karo. Multi-stage builds production me standard hai — samjho kaise dependencies separate hoti hain. Alpine base image use karo size ke liye.",
+    "resources": [
+      "Docker official docs 'Get Started' (docs.docker.com)"
+    ],
+    "deliverable": "Multi-stage Dockerfile banao, before/after image size compare karo aur note karo"
+  },
+  {
+    "day": 25,
+    "date": "2026-08-18",
+    "week": 4,
+    "phase": "P2 · Docker+CI/CD",
+    "title": "Docker Volumes + Data Persistence",
+    "target": "Volumes: -v flag, named volumes, bind mounts. Data persist karke dikhao",
+    "time": "1-2 hr",
+    "subtopics": [
+      "-v /host/path:/container/path bind mount",
+      "docker volume create named-volume",
+      "Named volume vs bind mount — kab kya use karna",
+      "Container delete hone ke baad bhi data persist hota hai verify karna",
+      "docker volume ls, docker volume inspect"
+    ],
+    "depth": "Volumes container ka data survive karne ke liye hai — bina volume database container band hone pe sab data gone. Bind mounts development ke liye best (code changes reflect hote hain), named volumes production ke liye.",
+    "resources": [
+      "Docker official docs 'Get Started' (docs.docker.com)"
+    ],
+    "deliverable": "MySQL container named volume ke saath run karo, container stop/delete karo, data persist verify karo"
+  },
+  {
+    "day": 26,
+    "date": "2026-08-19",
+    "week": 4,
+    "phase": "P2 · Docker+CI/CD",
+    "title": "Docker Networking",
+    "target": "Docker networking: bridge, port mapping, container-to-container communication",
+    "time": "1-2 hr",
+    "subtopics": [
+      "Default bridge network aur custom bridge network",
+      "-p 8080:80 port mapping ka kaam",
+      "Custom network me containers ko naam se reach karna",
+      "docker network create, docker network ls, docker network inspect",
+      "Container ke andar curl se doosra container ping karna"
+    ],
+    "depth": "Custom bridge network me containers ek doosre ko container name se reach kar sakte hain — yeh magic hai DNS ke through. Default bridge me sirf IP se communicate hota hai. Network concepts docker-compose se aur clear honge.",
+    "resources": [
+      "Docker official docs 'Get Started' (docs.docker.com)"
+    ],
+    "deliverable": "Do containers ek custom network pe chalao, curl se ek doosre se communicate karke dikhao"
+  },
+  {
+    "day": 27,
+    "date": "2026-08-20",
+    "week": 4,
+    "phase": "P2 · Docker+CI/CD",
+    "title": "Docker Compose Multi-Service",
+    "target": "docker-compose: 2-service setup (app + database) ek file me",
+    "time": "1-2 hr",
+    "subtopics": [
+      "docker-compose.yml structure: version, services, volumes, networks",
+      "depends_on se service startup order",
+      "Environment variables compose me set karna",
+      "docker compose up -d aur docker compose down",
+      "App container database container se connect karna by service name"
+    ],
+    "depth": "docker-compose ek game changer hai — poora multi-container setup ek command se. YAML indentation strictly follow karo — ek space galat toh error. depends_on sirf start order guarantee karta hai, readiness nahi.",
+    "resources": [
+      "Docker official docs 'Get Started' (docs.docker.com)"
+    ],
+    "deliverable": "App + PostgreSQL compose file banao, docker compose up se sab run karo — GitHub push"
+  },
+  {
+    "day": 28,
+    "date": "2026-08-21",
+    "week": 4,
+    "phase": "P2 · Docker+CI/CD",
+    "title": "Week 4 Revision + Docker Cheatsheet",
+    "target": "Revision + Docker 20-command cheatsheet GitHub pe push",
+    "time": "1 hr",
+    "subtopics": [
+      "Docker Week 4 all concepts recap",
+      "20 most-used Docker commands list karo",
+      "Common errors: port already in use, image not found, volume mount errors",
+      "Docker cleanup: docker system prune, dangling images",
+      "Next week: project aur CI/CD preview"
+    ],
+    "depth": "docker system prune -a se disk space free karo regularly — Docker images bahut space lete hain. 20 commands ko use case ke saath likho — sirf command nahi, example bhi.",
+    "resources": [
+      "Docker official docs 'Get Started' (docs.docker.com)"
+    ],
+    "deliverable": "Docker 20-command cheatsheet GitHub pe push karo with examples"
+  },
+  {
+    "day": 29,
+    "date": "2026-08-22",
+    "week": 5,
+    "phase": "P2 · Docker+CI/CD",
+    "title": "Project 1: 3-Tier App Docker",
+    "target": "PROJECT #1: 3-tier app dockerize karo (frontend + API + DB) compose ke saath",
+    "time": "3-4 hr",
+    "subtopics": [
+      "3-tier architecture: frontend (React/HTML), API (Node/Flask), DB (PostgreSQL/MySQL)",
+      "Har tier ke liye alag Dockerfile",
+      "docker-compose.yml me teeno services define karna",
+      "Environment variables se API URLs aur DB credentials pass karna",
+      "Health checks compose me lagana"
+    ],
+    "depth": "Yeh pehla bada project hai — time lagega, frustration hogi, yeh normal hai. Ek service pehle chalao phir doosri add karo. DB ko pehle healthy hone do phir API start karo.",
+    "resources": [
+      "Docker official docs 'Get Started' (docs.docker.com)",
+      "Play with Docker (labs.play-with-docker.com)"
+    ],
+    "deliverable": "3-tier app docker compose se run hone wala — localhost pe sabhi services working, GitHub repo"
+  },
+  {
+    "day": 30,
+    "date": "2026-08-23",
+    "week": 5,
+    "phase": "P2 · Docker+CI/CD",
+    "title": "Project 1 Polish + Documentation",
+    "target": "Project #1 finish: architecture diagram + solid README + GitHub push. LinkedIn post #5 (project showcase!)",
+    "time": "3-4 hr",
+    "subtopics": [
+      "Architecture diagram: draw.io ya Excalidraw se banana",
+      "README: project overview, prerequisites, how to run, architecture",
+      "Badges add karo README me (Docker, GitHub Actions status)",
+      "GitHub repo polish: topics/tags add karo",
+      "LinkedIn post: architecture image ke saath project highlight"
+    ],
+    "depth": "README ek recruiter ka pehla impression hai — 5 min me koi bhi setup karke run kar sake itna clear likho. Architecture diagram visual proof hai ki tum system design samajhte ho.",
+    "resources": [
+      "Docker official docs 'Get Started' (docs.docker.com)"
+    ],
+    "deliverable": "GitHub repo with architecture diagram + README live — LinkedIn post with project link published"
+  },
+  {
+    "day": 31,
+    "date": "2026-08-24",
+    "week": 5,
+    "phase": "P2 · Docker+CI/CD",
+    "title": "CI/CD Theory + YAML Basics",
+    "target": "CI/CD theory: CI vs CD vs CD, pipeline stages. YAML syntax basics",
+    "time": "1-2 hr",
+    "subtopics": [
+      "CI: Continuous Integration — code merge pe auto test",
+      "CD: Continuous Delivery vs Continuous Deployment ka difference",
+      "Pipeline stages: build, test, lint, deploy",
+      "YAML syntax: indentation, lists, maps, strings",
+      "YAML common mistakes: tab vs space, string quoting"
+    ],
+    "depth": "YAML indentation strict hai — sirf spaces use karo, tabs nahi. CI/CD ke concepts ek baar clear ho jaaye — interview me zaroor poochha jata hai. Real pipeline kal banayenge.",
+    "resources": [
+      "GitHub Actions official docs (docs.github.com/actions)"
+    ],
+    "deliverable": "CI/CD concept notes ek YAML file me likhke practice karo — valid YAML validator se check karo"
+  },
+  {
+    "day": 32,
+    "date": "2026-08-25",
+    "week": 5,
+    "phase": "P2 · Docker+CI/CD",
+    "title": "GitHub Actions First Workflow",
+    "target": "GitHub Actions: pehla workflow — push pe lint/test auto-run",
+    "time": "1-2 hr",
+    "subtopics": [
+      ".github/workflows/ci.yml file banana",
+      "on: push trigger aur branches filter",
+      "jobs aur steps structure",
+      "actions/checkout@v4 use karna",
+      "Lint tool run karna (flake8 ya eslint) PR pe"
+    ],
+    "depth": "GitHub Actions ka free tier 2000 minutes/month hai — enough hai learning ke liye. Workflow file YAML hai — indentation galat hone pe confusing errors aate hain. Actions marketplace se ready-made actions use karo.",
+    "resources": [
+      "GitHub Actions official docs (docs.github.com/actions)"
+    ],
+    "deliverable": "Ek repo me GitHub Actions workflow banao jo push pe lint run kare — green checkmark screenshot"
+  },
+  {
+    "day": 33,
+    "date": "2026-08-26",
+    "week": 5,
+    "phase": "P2 · Docker+CI/CD",
+    "title": "GitHub Actions: Jobs, Secrets, Artifacts",
+    "target": "GA deep: jobs, steps, secrets, artifacts. CI me Docker build karo",
+    "time": "1-2 hr",
+    "subtopics": [
+      "Multiple jobs: test job, build job — dependencies",
+      "needs: ke saath job order define karna",
+      "GitHub Secrets me credentials store karna",
+      "actions/upload-artifact se build output save karna",
+      "Docker build step GitHub Actions me"
+    ],
+    "depth": "Secrets kabhi hardcode mat karo — hamesha GitHub Secrets use karo. Job parallelism samjho: independent jobs parallel run hote hain, dependent wale sequential. artifacts se build outputs jobs ke beech pass hote hain.",
+    "resources": [
+      "GitHub Actions official docs (docs.github.com/actions)"
+    ],
+    "deliverable": "Workflow me test + docker build do jobs banao, Docker build artifact upload karo — workflow run screenshot"
+  },
+  {
+    "day": 34,
+    "date": "2026-08-27",
+    "week": 5,
+    "phase": "P2 · Docker+CI/CD",
+    "title": "GitHub Actions: Auto Docker Hub Push",
+    "target": "GA: image build karke Docker Hub pe auto-push pipeline",
+    "time": "1-2 hr",
+    "subtopics": [
+      "docker/login-action se Docker Hub authenticate karna",
+      "docker/build-push-action se image build + push",
+      "Docker Hub credentials GitHub Secrets me store karna",
+      "Image tagging: latest aur git SHA based tags",
+      "Main branch pe push hone pe auto-deploy trigger"
+    ],
+    "depth": "Yeh pura CI pipeline complete hai — code push karo aur Docker Hub pe automatically image chali jaye. DOCKER_USERNAME aur DOCKER_TOKEN Secrets me daalo, password nahi. yeh production-ready pattern hai.",
+    "resources": [
+      "GitHub Actions official docs (docs.github.com/actions)"
+    ],
+    "deliverable": "GitHub push pe Docker Hub pe auto-publish hone wala pipeline — Docker Hub pe image verify karo"
+  },
+  {
+    "day": 35,
+    "date": "2026-08-28",
+    "week": 5,
+    "phase": "P2 · Docker+CI/CD",
+    "title": "Pipeline Debugging Practice",
+    "target": "Revision + jaan-bujh ke pipeline todo, phir fix karo (troubleshooting muscle)",
+    "time": "1 hr",
+    "subtopics": [
+      "Deliberately wrong YAML indentation — error padhna",
+      "Wrong Docker credentials — authentication failure debug",
+      "Missing env variable in workflow — CI failure diagnose",
+      "GitHub Actions logs ko ache se padhna",
+      "Common failure patterns aur fixes"
+    ],
+    "depth": "Troubleshooting skill sirf practice se aati hai — jaan-bujh ke errors karo aur fix karo. GitHub Actions logs me 'Run' step expand karo — wahaan actual error hota hai. Error mat daro.",
+    "resources": [
+      "GitHub Actions official docs (docs.github.com/actions)"
+    ],
+    "deliverable": "3 types ke pipeline errors khud introduce karo aur fix karo — error + fix notes file"
+  },
+  {
+    "day": 36,
+    "date": "2026-08-29",
+    "week": 6,
+    "phase": "P2 · Docker+CI/CD",
+    "title": "Project 2: Full CI Pipeline",
+    "target": "PROJECT #2: full CI pipeline — test → build → push. README me status badge lagao",
+    "time": "3-4 hr",
+    "subtopics": [
+      "3-stage pipeline: lint/test → docker build → docker push",
+      "GitHub Actions badge URL banana README ke liye",
+      "Pipeline fail hone pe Docker push nahi hota — verify karo",
+      "PR me CI status check mandatory banana",
+      "Workflow dispatch: manual trigger bhi lagao"
+    ],
+    "depth": "Yeh production-level CI hai — test fail hone pe deploy nahi hona chahiye. Status badge recruiter ko ek glance me dikhata hai ki automation hai. Full pipeline complete karo thoroughly.",
+    "resources": [
+      "GitHub Actions official docs (docs.github.com/actions)",
+      "Docker official docs 'Get Started' (docs.docker.com)"
+    ],
+    "deliverable": "Full CI pipeline working repo with green status badge in README — LinkedIn pe share karo"
+  },
+  {
+    "day": 37,
+    "date": "2026-08-30",
+    "week": 6,
+    "phase": "P2 · Docker+CI/CD",
+    "title": "Datadog Learning Center Start",
+    "target": "DATADOG WEEK: Learning Center pe Fundamentals path start (16 courses, FREE). Office setup document karo. LinkedIn post #6",
+    "time": "3-4 hr",
+    "subtopics": [
+      "Datadog Learning Center account setup (learn.datadoghq.com)",
+      "Introduction to Datadog course complete karna",
+      "Office Datadog setup document karo — version, integrations used",
+      "Observability ka high-level concept samjhna",
+      "Datadog hierarchy: organization, accounts, users"
+    ],
+    "depth": "Learning Center ke courses free hain — ache se karo. Office ka current Datadog setup document karna valuable hai — yeh real-world context deta hai. Sirf watch mat karo — hands-on exercises karo.",
+    "resources": [
+      "Datadog Learning Center (learn.datadoghq.com)"
+    ],
+    "deliverable": "Learning Center profile + pehla course complete karo — certificate screenshot + LinkedIn post"
+  },
+  {
+    "day": 38,
+    "date": "2026-08-31",
+    "week": 6,
+    "phase": "P2 · Docker+CI/CD",
+    "title": "Observability Theory + 4 Golden Signals",
+    "target": "Observability theory: metrics vs logs vs traces + 4 golden signals. Notes banao",
+    "time": "1-2 hr",
+    "subtopics": [
+      "Metrics: numeric time-series data (CPU %, request count)",
+      "Logs: text-based event records (structured vs unstructured)",
+      "Traces: distributed request path tracking",
+      "4 Golden Signals: Latency, Traffic, Errors, Saturation",
+      "SLI, SLO, SLA concepts — Google SRE book se"
+    ],
+    "depth": "4 Golden Signals ko heart se yaad karo — yeh har SRE/DevOps interview me aata hai. Metrics vs logs vs traces ka difference clear karo — Datadog teeno karta hai. Notes apne words me likhna zyada helpful hai.",
+    "resources": [
+      "Datadog Learning Center (learn.datadoghq.com)"
+    ],
+    "deliverable": "Observability concept notes markdown file — 4 Golden Signals + M/L/T definitions apne words me"
+  },
+  {
+    "day": 39,
+    "date": "2026-09-01",
+    "week": 6,
+    "phase": "P2 · Docker+CI/CD",
+    "title": "Datadog Agent Architecture",
+    "target": "Datadog agent architecture: integrations, DogStatsD. Job me jo karte ho uska WHY samjho",
+    "time": "1-2 hr",
+    "subtopics": [
+      "Datadog agent kaise kaam karta hai — daemon process",
+      "Integrations: YAML config files, check intervals",
+      "DogStatsD: custom metrics ka protocol (UDP 8125)",
+      "Agent logs location: /var/log/datadog/agent.log",
+      "Office me jo integrations hain unka purpose samjho"
+    ],
+    "depth": "Agent ek daemon hai jo metrics collect karke Datadog cloud pe bhejta hai. DogStatsD application-level custom metrics ke liye hai — Datadog job me yeh samajhna crucial hai. Office setup se real examples lo.",
+    "resources": [
+      "Datadog Learning Center (learn.datadoghq.com)"
+    ],
+    "deliverable": "Datadog agent architecture diagram banao (draw.io) — office integrations note karo"
+  },
+  {
+    "day": 40,
+    "date": "2026-09-02",
+    "week": 6,
+    "phase": "P2 · Docker+CI/CD",
+    "title": "Datadog Monitors + Alerting",
+    "target": "Monitors + alerting best practices. Ek monitor design doc likho (alert fatigue kaise avoid kare)",
+    "time": "1-2 hr",
+    "subtopics": [
+      "Monitor types: metric, log, APM, composite",
+      "Alert conditions: threshold, change, anomaly detection",
+      "Notification channels: email, Slack, PagerDuty",
+      "Alert fatigue: too many alerts se kya hota hai",
+      "Monitor design: good threshold kaise choose karna"
+    ],
+    "depth": "Alert fatigue real problem hai — agar har cheez pe alert hai toh log alerts ignore karne lagte hain. Meaningful thresholds set karo — p99 latency, error rate percentage. Monitor design doc real-world thinking dikhata hai.",
+    "resources": [
+      "Datadog Learning Center (learn.datadoghq.com)"
+    ],
+    "deliverable": "Ek monitor design document likho — kya monitor karna, threshold kyu, notification kisko — GitHub push"
+  },
+  {
+    "day": 41,
+    "date": "2026-09-03",
+    "week": 6,
+    "phase": "P2 · Docker+CI/CD",
+    "title": "Datadog Dashboard Design",
+    "target": "Dashboards: ek killer dashboard design karo (job ya demo app pe)",
+    "time": "1-2 hr",
+    "subtopics": [
+      "Dashboard widgets: timeseries, query value, heatmap, top list",
+      "Template variables se dynamic dashboards",
+      "Dashboard layout: golden signals ko top pe rakhna",
+      "Datadog query language: sum by tag, avg:metric{*}",
+      "Sharing dashboard: public link ya org-wide"
+    ],
+    "depth": "Dashboard executive ke liye bhi readable hona chahiye — metric names clear likho. Template variables se ek hi dashboard multiple environments ke liye kaam karta hai. Design pehle paper pe karo phir Datadog me banao.",
+    "resources": [
+      "Datadog Learning Center (learn.datadoghq.com)"
+    ],
+    "deliverable": "Ek Datadog dashboard screenshot — golden signals visible, clean layout — portfolio ke liye save karo"
+  },
+  {
+    "day": 42,
+    "date": "2026-09-04",
+    "week": 6,
+    "phase": "P2 · Docker+CI/CD",
+    "title": "Phase 2 Checkpoint + Halfway Celebration",
+    "target": "PHASE 2 CHECKPOINT: Datadog free practice exam (25 Q) do. HALFWAY LinkedIn post #7!",
+    "time": "1 hr",
+    "subtopics": [
+      "Datadog Learning Center practice assessment lena",
+      "Docker + CI/CD weak areas identify karna",
+      "Phase 2 projects ka GitHub portfolio review",
+      "Halfway milestone: 42 days complete!",
+      "Phase 3 preview: K8s aur AWS kya cover hoga"
+    ],
+    "depth": "Practice exam se pata chalega kaunse Datadog topics weak hain. 42 din poore — yeh real achievement hai, celebrate karo seriously. Phase 3 heavier hai — mentally prepare ho jao.",
+    "resources": [
+      "Datadog Learning Center (learn.datadoghq.com)"
+    ],
+    "deliverable": "Practice exam score screenshot + LinkedIn HALFWAY celebration post with journey so far"
+  },
+  {
+    "day": 43,
+    "date": "2026-09-05",
+    "week": 7,
+    "phase": "P3 · K8s+AWS",
+    "title": "Kubernetes Architecture + First Pod",
+    "target": "K8s architecture: control plane, nodes, pods. minikube/kind install + pehla pod deploy",
+    "time": "3-4 hr",
+    "subtopics": [
+      "Control plane components: API server, etcd, scheduler, controller manager",
+      "Worker node components: kubelet, kube-proxy, container runtime",
+      "Pod: K8s ka smallest deployable unit, ek ya zyada containers",
+      "minikube start aur kubectl get nodes verify karna",
+      "kubectl run nginx --image=nginx aur kubectl get pods"
+    ],
+    "depth": "Control plane = brain, nodes = workers — yeh mental model rakho. Pod ek VM nahi hai — ek ephemeral unit hai. minikube local testing ke liye hai, production me yeh nahi hota. etcd kya store karta hai samjho — cluster ka saara state.",
+    "resources": [
+      "kubernetes.io/docs Concepts (Cluster Architecture)",
+      "minikube docs (minikube.sigs.k8s.io)"
+    ],
+    "deliverable": "minikube cluster pe nginx pod deploy karo, kubectl get pods output screenshot lo"
+  },
+  {
+    "day": 44,
+    "date": "2026-09-06",
+    "week": 7,
+    "phase": "P3 · K8s+AWS",
+    "title": "Deployments: Scaling + Rollouts",
+    "target": "Deployments: scaling, rolling update, rollback. kubectl top-20 commands. LinkedIn post #8",
+    "time": "3-4 hr",
+    "subtopics": [
+      "kubectl create deployment aur deployment YAML manifest",
+      "kubectl scale deployment --replicas=3",
+      "Rolling update: kubectl set image deployment/name container=newimage",
+      "kubectl rollout status aur kubectl rollout undo",
+      "Top 20 kubectl commands: get, describe, apply, delete, logs, exec"
+    ],
+    "depth": "Deployment ReplicaSet ke through Pods manage karta hai — yeh abstraction layer samjho. Rolling update zero-downtime deploy karta hai — strategy type: RollingUpdate samjho. kubectl describe pods troubleshooting ka pehla step hai.",
+    "resources": [
+      "kubernetes.io/docs Concepts (Workloads - Deployments)",
+      "KillerCoda (killercoda.com)"
+    ],
+    "deliverable": "Deployment create karo, scale karo, rolling update karo, rollback karo — sab steps terminal output GitHub pe + LinkedIn post"
+  },
+  {
+    "day": 45,
+    "date": "2026-09-07",
+    "week": 7,
+    "phase": "P3 · K8s+AWS",
+    "title": "Kubernetes Services",
+    "target": "Services: ClusterIP, NodePort, LoadBalancer. Apni app expose karo",
+    "time": "1-2 hr",
+    "subtopics": [
+      "ClusterIP: cluster internal traffic ke liye (default)",
+      "NodePort: node ke IP aur port pe external access",
+      "LoadBalancer: cloud provider ka LB provision karta hai",
+      "kubectl expose deployment --type=NodePort --port=80",
+      "Service YAML manifest — selector se Pods link karna"
+    ],
+    "depth": "Service Pods ke dynamic IP ko abstract karta hai — Pod replace hone pe bhi Service ka IP same rehta hai. NodePort minikube pe kaam karta hai testing ke liye. Production me LoadBalancer ya Ingress use hota hai.",
+    "resources": [
+      "kubernetes.io/docs Concepts (Services)",
+      "KillerCoda (killercoda.com)"
+    ],
+    "deliverable": "App ko NodePort Service se expose karo, browser me access karo — working URL screenshot"
+  },
+  {
+    "day": 46,
+    "date": "2026-09-08",
+    "week": 7,
+    "phase": "P3 · K8s+AWS",
+    "title": "ConfigMaps + Secrets",
+    "target": "ConfigMaps + Secrets: app config bahar nikaalo",
+    "time": "1-2 hr",
+    "subtopics": [
+      "ConfigMap: non-sensitive config data store karna",
+      "Secret: base64 encoded sensitive data (passwords, tokens)",
+      "ConfigMap ko env var ke roop me Pod me inject karna",
+      "Secret ko volume se mount karna",
+      "kubectl create configmap aur kubectl create secret"
+    ],
+    "depth": "Secret base64 hai encryption nahi — thoda misleading naam hai. Production me Kubernetes Secrets ke liye external secret managers use hote hain (Vault, AWS Secrets Manager). ConfigMaps app config ke liye ideal hain — DB host, feature flags.",
+    "resources": [
+      "kubernetes.io/docs Concepts (ConfigMaps, Secrets)"
+    ],
+    "deliverable": "App me DB password Secret se inject karo, config URL ConfigMap se — YAML manifest GitHub push"
+  },
+  {
+    "day": 47,
+    "date": "2026-09-09",
+    "week": 7,
+    "phase": "P3 · K8s+AWS",
+    "title": "K8s Debugging + Namespaces",
+    "target": "Debugging: describe, logs, exec, events. Namespaces + labels + selectors",
+    "time": "1-2 hr",
+    "subtopics": [
+      "kubectl describe pod pod-name se events aur errors dekhna",
+      "kubectl logs pod-name -c container-name",
+      "kubectl exec -it pod-name -- /bin/sh",
+      "kubectl get events --sort-by='.lastTimestamp'",
+      "Namespace: logical isolation, kubectl -n namespace-name"
+    ],
+    "depth": "K8s troubleshooting ka order: get → describe → logs → exec. Events section me actual error hota hai. Namespaces production me team isolation ke liye use hote hain. Labels aur selectors relationships define karte hain resources ke beech.",
+    "resources": [
+      "kubernetes.io/docs Tasks (Debug Applications)",
+      "KillerCoda (killercoda.com)"
+    ],
+    "deliverable": "Ek jaan-bujh ke broken Pod banao, debugging steps follow karo, fix karo — debug steps document karo"
+  },
+  {
+    "day": 48,
+    "date": "2026-09-10",
+    "week": 7,
+    "phase": "P3 · K8s+AWS",
+    "title": "Probes + Resource Limits",
+    "target": "Liveness/readiness probes + resource requests/limits lagao",
+    "time": "1-2 hr",
+    "subtopics": [
+      "Liveness probe: container alive hai ya nahi — restart trigger",
+      "Readiness probe: container traffic receive karne ke liye ready hai ya nahi",
+      "HTTP GET probe vs TCP probe vs exec probe",
+      "resources.requests: guaranteed resources for scheduling",
+      "resources.limits: maximum allowed, exceed hone pe OOMKilled"
+    ],
+    "depth": "Probes production me critical hain — bina readiness probe ke broken Pod traffic receive karta rehta hai. OOMKilled bahut common error hai — limits properly set karo. Requests se scheduling decide hota hai, limits se runtime.",
+    "resources": [
+      "kubernetes.io/docs Tasks (Configure Liveness, Readiness Probes)"
+    ],
+    "deliverable": "Deployment me liveness + readiness probe aur resource limits add karo — YAML manifest push karo"
+  },
+  {
+    "day": 49,
+    "date": "2026-09-11",
+    "week": 7,
+    "phase": "P3 · K8s+AWS",
+    "title": "Week 7 Revision + KillerCoda Labs",
+    "target": "Revision + kubectl cheatsheet + KillerCoda pe free K8s labs",
+    "time": "1 hr",
+    "subtopics": [
+      "Week 7 K8s concepts quick recap",
+      "kubectl top 20 commands ka khud se test",
+      "KillerCoda: 2-3 K8s scenarios complete karo",
+      "kubectl cheatsheet file banana",
+      "Week 8 project preview: K8s pe full app deploy"
+    ],
+    "depth": "KillerCoda browser me K8s cluster deta hai free — CKA exam preparation ke liye bhi useful hai. kubectl commands type karo, copy paste mat karo — muscle memory banana hai.",
+    "resources": [
+      "KillerCoda (killercoda.com)",
+      "kubernetes.io/docs Tasks"
+    ],
+    "deliverable": "kubectl cheatsheet (20 commands with examples) GitHub push + KillerCoda 2 scenarios complete screenshot"
+  },
+  {
+    "day": 50,
+    "date": "2026-09-12",
+    "week": 8,
+    "phase": "P3 · K8s+AWS",
+    "title": "Project 3: App on Kubernetes",
+    "target": "PROJECT #3: apna compose wala app K8s pe deploy — saare manifests khud likho",
+    "time": "3-4 hr",
+    "subtopics": [
+      "docker-compose app ko K8s manifests me convert karna",
+      "Deployment, Service, ConfigMap, Secret YAML files",
+      "kubectl apply -f manifests/ se sab ek saath deploy",
+      "Pods healthy hai verify karna — kubectl get all",
+      "App externally accessible hai verify karna"
+    ],
+    "depth": "Yeh bada project hai — pehle ek service dhang se deploy karo phir baaki add karo. YAML likh ke khud apply karo, kubectl create shortcuts se nahi. Real production workflow yehi hai.",
+    "resources": [
+      "kubernetes.io/docs Tasks",
+      "KodeKloud Playground free tier"
+    ],
+    "deliverable": "3-tier app K8s pe live — kubectl get all healthy output screenshot, manifests folder GitHub push"
+  },
+  {
+    "day": 51,
+    "date": "2026-09-13",
+    "week": 8,
+    "phase": "P3 · K8s+AWS",
+    "title": "Ingress + Ingress Controller",
+    "target": "Ingress + ingress controller: project me ingress lagao. LinkedIn post #9",
+    "time": "3-4 hr",
+    "subtopics": [
+      "Ingress: HTTP routing rules — path-based aur host-based",
+      "Ingress controller: nginx-ingress ya traefik install karna",
+      "Ingress YAML: host, path, backend service",
+      "TLS termination: Secret se cert + key mount karna",
+      "Multiple services ek Ingress ke through expose karna"
+    ],
+    "depth": "Ingress LoadBalancer se zyada flexible hai — ek IP pe multiple services routing kar sakta hai. nginx-ingress minikube me addons se enable hota hai. TLS ke liye self-signed cert use karo testing pe.",
+    "resources": [
+      "kubernetes.io/docs Concepts (Ingress)",
+      "KillerCoda (killercoda.com)"
+    ],
+    "deliverable": "Project me Ingress add karo, path-based routing working — Ingress YAML GitHub push + LinkedIn post"
+  },
+  {
+    "day": 52,
+    "date": "2026-09-14",
+    "week": 8,
+    "phase": "P3 · K8s+AWS",
+    "title": "Persistent Storage in K8s",
+    "target": "Storage: PV, PVC, StorageClass concept + ek stateful example",
+    "time": "1-2 hr",
+    "subtopics": [
+      "PersistentVolume (PV): cluster level storage resource",
+      "PersistentVolumeClaim (PVC): user ka storage request",
+      "StorageClass: dynamic provisioning",
+      "StatefulSet: stateful apps ke liye (databases)",
+      "Database Pod me PVC mount karke data persist karna"
+    ],
+    "depth": "PV vs PVC relationship samjho — PV admin define karta hai, PVC developer request karta hai. Dynamic provisioning (StorageClass) cloud me auto create karta hai. StatefulSet ka naam-based identity feature samjho.",
+    "resources": [
+      "kubernetes.io/docs Concepts (Storage)"
+    ],
+    "deliverable": "MySQL StatefulSet with PVC deploy karo, data persist verify karo Pod restart ke baad"
+  },
+  {
+    "day": 53,
+    "date": "2026-09-15",
+    "week": 8,
+    "phase": "P3 · K8s+AWS",
+    "title": "Helm Package Manager",
+    "target": "Helm: charts, values, install/upgrade/rollback",
+    "time": "1-2 hr",
+    "subtopics": [
+      "Helm chart structure: Chart.yaml, values.yaml, templates/",
+      "helm install release-name chart-name",
+      "values.yaml se configuration customize karna",
+      "helm upgrade aur helm rollback",
+      "helm list aur helm status"
+    ],
+    "depth": "Helm K8s ka package manager hai — ek command se complex app deploy ho jata hai. values.yaml se environment specific config change karo — same chart different values ke saath. helm template se rendered YAML dekhna helpful hai.",
+    "resources": [
+      "kubernetes.io/docs Tasks",
+      "KodeKloud Playground free tier"
+    ],
+    "deliverable": "helm install se nginx ya any chart deploy karo, values.yaml override karke — helm list screenshot"
+  },
+  {
+    "day": 54,
+    "date": "2026-09-16",
+    "week": 8,
+    "phase": "P3 · K8s+AWS",
+    "title": "Custom Helm Chart for Project",
+    "target": "Apne project ka Helm chart banao",
+    "time": "1-2 hr",
+    "subtopics": [
+      "helm create my-app se scaffold banana",
+      "templates/ me khud ke Deployment aur Service YAML",
+      "values.yaml me image, replicas, port configurable banana",
+      "{{ .Values.image.tag }} template syntax",
+      "helm install --set key=value se override testing"
+    ],
+    "depth": "Helm template syntax Go templates hai — basics samjho: {{ }} me values, | quote pipe. Apna chart ek real deliverable hai portfolio ke liye. values.yaml me sensible defaults rakho.",
+    "resources": [
+      "kubernetes.io/docs Tasks"
+    ],
+    "deliverable": "Apne 3-tier app ka Helm chart GitHub push karo — helm install se working verify karo"
+  },
+  {
+    "day": 55,
+    "date": "2026-09-17",
+    "week": 8,
+    "phase": "P3 · K8s+AWS",
+    "title": "K8s + Datadog Integration",
+    "target": "K8s + Datadog: cluster agent, autodiscovery. YEH COMBO hi aapka 30-LPA moat hai — ache se karo",
+    "time": "1-2 hr",
+    "subtopics": [
+      "Datadog Cluster Agent architecture — kaise kaam karta hai",
+      "Helm se Datadog agent K8s pe deploy karna",
+      "Autodiscovery: pod annotations se metrics collect karna",
+      "Kubernetes integration: pod metrics, node metrics",
+      "Live Container monitoring Datadog me"
+    ],
+    "depth": "Yeh sabse important din hai — K8s + Datadog combo jo tumhara job profile hai. Cluster Agent aur node agent ke beech ka difference samjho. Helm se Datadog deploy karna ek real production task hai — carefully karo.",
+    "resources": [
+      "Datadog Learning Center (learn.datadoghq.com)",
+      "kubernetes.io/docs Tasks"
+    ],
+    "deliverable": "Datadog Helm chart se K8s cluster pe deploy karo, pods visible in Datadog — Live Containers screenshot"
+  },
+  {
+    "day": 56,
+    "date": "2026-09-18",
+    "week": 8,
+    "phase": "P3 · K8s+AWS",
+    "title": "K8s Troubleshooting Scenarios",
+    "target": "K8s troubleshooting: CrashLoopBackOff, ImagePullBackOff, OOMKilled fix karna seekho",
+    "time": "1 hr",
+    "subtopics": [
+      "CrashLoopBackOff: container crash ho raha hai repeatedly — logs se reason",
+      "ImagePullBackOff: image pull fail — registry credentials ya wrong tag",
+      "OOMKilled: memory limit exceed — limits increase ya leak fix",
+      "Pending Pod: insufficient resources ya node selector mismatch",
+      "kubectl describe + kubectl logs debugging flow"
+    ],
+    "depth": "Yeh 4 errors 80% K8s issues cover karte hain. Har error ke liye exact debugging steps practice karo. CrashLoopBackOff me logs pehle dekhna, OOMKilled me limits. Interview me yehi poochha jata hai.",
+    "resources": [
+      "kubernetes.io/docs Tasks (Debug Applications)",
+      "KillerCoda (killercoda.com)"
+    ],
+    "deliverable": "Ek troubleshooting runbook file: 4 common K8s errors + exact debug + fix steps — GitHub push"
+  },
+  {
+    "day": 57,
+    "date": "2026-09-19",
+    "week": 9,
+    "phase": "P3 · K8s+AWS",
+    "title": "AWS Free Tier Setup + EC2 + IAM",
+    "target": "AWS free tier account + IAM basics + EC2 launch + SSH + security groups. Billing alarm PEHLE lagao",
+    "time": "3-4 hr",
+    "subtopics": [
+      "AWS free tier account create + billing alarm $5 set karo",
+      "IAM: users, roles, policies — least privilege principle",
+      "EC2 instance t2.micro launch (free tier eligible)",
+      "Security group: inbound rules — port 22 SSH allow",
+      "SSH key pair download aur EC2 pe connect karna"
+    ],
+    "depth": "BILLING ALARM PEHLE lagao — yeh mandatory hai. Free tier limits hain: 750 hr EC2, 5GB S3 — track karo. IAM me root account use mat karo — ek admin user banao. Security group ka concept K8s network policy se similar hai.",
+    "resources": [
+      "AWS Skill Builder free courses (skillbuilder.aws)"
+    ],
+    "deliverable": "EC2 instance SSH se connect karo — terminal screenshot, billing alarm confirmation screenshot"
+  },
+  {
+    "day": 58,
+    "date": "2026-09-20",
+    "week": 9,
+    "phase": "P3 · K8s+AWS",
+    "title": "AWS VPC Basics",
+    "target": "VPC basics: subnets, route tables, IGW. Ek simple VPC khud banao. LinkedIn post #10",
+    "time": "3-4 hr",
+    "subtopics": [
+      "VPC: private network in AWS, CIDR block 10.0.0.0/16",
+      "Public subnet: IGW ke saath internet accessible",
+      "Private subnet: internet access nahi directly",
+      "Route table: traffic kahan jaaye define karna",
+      "Internet Gateway (IGW): VPC ko internet se connect karna"
+    ],
+    "depth": "VPC networking concept samjhna time lagta hai — ek simple VPC banao aur manually sab connect karo. Default VPC se start mat karo — khud banao sikhoge. Route table ek router ka config hai samjho.",
+    "resources": [
+      "AWS Skill Builder free courses (skillbuilder.aws)"
+    ],
+    "deliverable": "Custom VPC with public subnet create karo, EC2 deploy karo, internet access verify — Architecture screenshot + LinkedIn"
+  },
+  {
+    "day": 59,
+    "date": "2026-09-21",
+    "week": 9,
+    "phase": "P3 · K8s+AWS",
+    "title": "S3 + IAM Policies",
+    "target": "S3 + IAM policies practice: bucket policies, least privilege",
+    "time": "1-2 hr",
+    "subtopics": [
+      "S3 bucket create, objects upload/download",
+      "Bucket policy JSON — kisi ek path pe public access",
+      "IAM policy JSON — Action, Resource, Effect",
+      "Least privilege: sirf zaroori permissions dena",
+      "S3 versioning aur lifecycle policies ka concept"
+    ],
+    "depth": "IAM policy JSON samajhna important hai — Action (kya), Resource (kaun sa), Effect (Allow/Deny). Least privilege DevOps security ka core principle hai. S3 public access by default block hota hai — deliberately allow karna padta hai.",
+    "resources": [
+      "AWS Skill Builder free courses (skillbuilder.aws)"
+    ],
+    "deliverable": "S3 bucket create karo, IAM policy se limited access give karo — policy JSON GitHub push"
+  },
+  {
+    "day": 60,
+    "date": "2026-09-22",
+    "week": 9,
+    "phase": "P3 · K8s+AWS",
+    "title": "Deploy Docker App on EC2",
+    "target": "EC2 pe apna dockerized app manually deploy karo",
+    "time": "1-2 hr",
+    "subtopics": [
+      "EC2 pe Docker install karna (user data script ya manual)",
+      "Docker Hub se image pull karna EC2 pe",
+      "docker run -d -p 80:8080 se app chalaana",
+      "Security group me app port (80/8080) open karna",
+      "Public IP pe browser me app access karna"
+    ],
+    "depth": "Yeh manual deployment hai — production me yeh manually nahi hota, automation hoti hai. Lekin manually ek baar karna important hai — process samajhna. User data script se deployment automate karna bonus hai.",
+    "resources": [
+      "AWS Skill Builder free courses (skillbuilder.aws)"
+    ],
+    "deliverable": "EC2 public IP pe app running — browser screenshot, deployment steps note karo"
+  },
+  {
+    "day": 61,
+    "date": "2026-09-23",
+    "week": 9,
+    "phase": "P3 · K8s+AWS",
+    "title": "ALB + RDS Concepts",
+    "target": "ALB + RDS concepts: managed services ka funda samjho",
+    "time": "1-2 hr",
+    "subtopics": [
+      "ALB (Application Load Balancer): path-based routing, health checks",
+      "Target groups: EC2 instances ya IPs ka group",
+      "RDS: managed relational database — Multi-AZ, backups",
+      "RDS free tier: db.t3.micro 750 hr MySQL",
+      "Connection string aur security group rules RDS ke liye"
+    ],
+    "depth": "ALB aur RDS managed services hain — AWS maintenance karta hai. Sirf concept samjho aur free tier me ek baar try karo. RDS create karo lekin kaam khatam hone ke baad delete karo — free tier limit hai.",
+    "resources": [
+      "AWS Skill Builder free courses (skillbuilder.aws)"
+    ],
+    "deliverable": "ALB + RDS concept notes — architecture diagram banao EC2+ALB+RDS ke saath"
+  },
+  {
+    "day": 62,
+    "date": "2026-09-24",
+    "week": 9,
+    "phase": "P3 · K8s+AWS",
+    "title": "EKS Overview + ECR Push",
+    "target": "EKS overview + ECR: apni image ECR pe push karo",
+    "time": "1-2 hr",
+    "subtopics": [
+      "EKS: managed Kubernetes on AWS — control plane AWS manage karta hai",
+      "EKS vs self-managed K8s comparison",
+      "ECR (Elastic Container Registry): private Docker registry",
+      "aws ecr get-login-password se authenticate karna",
+      "docker tag + docker push se image ECR pe push karna"
+    ],
+    "depth": "EKS expensive hai — free tier nahi hai, sirf concept samjho. ECR free tier 500MB hai. Image ECR pe push karna ek real skill hai — AWS credentials configure karo pehle (aws configure). EKS job interviews me zaroor aata hai.",
+    "resources": [
+      "AWS Skill Builder free courses (skillbuilder.aws)"
+    ],
+    "deliverable": "Docker image ECR pe push karo — aws ecr describe-images se verify karo, screenshot"
+  },
+  {
+    "day": 63,
+    "date": "2026-09-25",
+    "week": 9,
+    "phase": "P3 · K8s+AWS",
+    "title": "Phase 3 Checkpoint + AWS Cleanup",
+    "target": "PHASE 3 CHECKPOINT: cloud billing samjho, sab resources clean karo, gaps list banao",
+    "time": "1 hr",
+    "subtopics": [
+      "AWS Cost Explorer se current spend check karna",
+      "EC2, RDS, ELB sab terminate/delete karna",
+      "S3 buckets empty karke delete karna",
+      "Phase 3 gaps list: K8s + AWS weak topics",
+      "Phase 4 preview: Terraform, Capstone, Interview"
+    ],
+    "depth": "AWS cleanup MANDATORY hai — orphan resources paise lete hain. Har resource manually check karo region-wise. Gaps honest list banao — Phase 4 me time milega practice ka. Cost Explorer me AWS charges ache se samjho.",
+    "resources": [
+      "AWS Skill Builder free courses (skillbuilder.aws)"
+    ],
+    "deliverable": "AWS account resources $0 confirm karo — billing screenshot, Phase 3 gaps list GitHub push"
+  },
+  {
+    "day": 64,
+    "date": "2026-09-26",
+    "week": 10,
+    "phase": "P4 · IaC+Capstone",
+    "title": "Terraform Fundamentals",
+    "target": "Terraform start: providers, resources, plan/apply/destroy. Pehla EC2 code se banao",
+    "time": "3-4 hr",
+    "subtopics": [
+      "Terraform providers: AWS provider aur authentication",
+      "resource block: type aur name syntax",
+      "terraform init, plan, apply, destroy workflow",
+      "terraform.tfstate file — yeh kya store karta hai",
+      "EC2 instance resource block likhna"
+    ],
+    "depth": "terraform plan se pehle hamesha dekho kya change hoga. State file ek sensitive file hai — version control me mat daalo. Provider version lock karo versions.tf me — production habit hai.",
+    "resources": [
+      "HashiCorp Terraform tutorials (developer.hashicorp.com/terraform)"
+    ],
+    "deliverable": "Terraform se EC2 create karo, terraform apply output screenshot, phir terraform destroy karo"
+  },
+  {
+    "day": 65,
+    "date": "2026-09-27",
+    "week": 10,
+    "phase": "P4 · IaC+Capstone",
+    "title": "Terraform Variables + State",
+    "target": "TF variables, outputs, state (state = TF ka dil, ache se samjho). LinkedIn post #11",
+    "time": "3-4 hr",
+    "subtopics": [
+      "variable block aur var.variable_name reference",
+      "terraform.tfvars file me values set karna",
+      "output block se resource values print karna",
+      "terraform state list aur terraform state show",
+      "State locking: concurrent apply se bachna (S3 backend)"
+    ],
+    "depth": "State file = Terraform ka memory — corrupt ho gayi toh bahut problem. Variables se code reusable banta hai — hardcode mat karo. Outputs se doosre modules ya scripts values le sakte hain.",
+    "resources": [
+      "HashiCorp Terraform tutorials (developer.hashicorp.com/terraform)"
+    ],
+    "deliverable": "Variables aur outputs wala Terraform config GitHub push + LinkedIn post #11 IaC topic pe"
+  },
+  {
+    "day": 66,
+    "date": "2026-09-28",
+    "week": 10,
+    "phase": "P4 · IaC+Capstone",
+    "title": "Terraform: Full EC2 Setup",
+    "target": "TF se full setup: EC2 + security group + key pair, sab code me",
+    "time": "1-2 hr",
+    "subtopics": [
+      "aws_security_group resource — ingress/egress rules",
+      "aws_key_pair resource — public key upload",
+      "aws_instance me security_group_ids aur key_name reference karna",
+      "depends_on implicit vs explicit dependency",
+      "terraform fmt se code formatting"
+    ],
+    "depth": "Resource references ek doosre ke output use karte hain — yehi IaC ka magic hai. depends_on sirf tabhi use karo jab implicit dependency na ho. terraform fmt hamesha commit se pehle run karo.",
+    "resources": [
+      "HashiCorp Terraform tutorials (developer.hashicorp.com/terraform)"
+    ],
+    "deliverable": "EC2 + SG + key pair ek Terraform config se deploy karo, SSH connect karo — GitHub push"
+  },
+  {
+    "day": 67,
+    "date": "2026-09-29",
+    "week": 10,
+    "phase": "P4 · IaC+Capstone",
+    "title": "Terraform Modules",
+    "target": "TF modules: registry ke modules use karna seekho",
+    "time": "1-2 hr",
+    "subtopics": [
+      "Terraform Registry (registry.terraform.io) browse karna",
+      "module block se community module use karna",
+      "source, version, inputs pass karna",
+      "terraform-aws-modules/vpc/aws module use karna",
+      "Module outputs ko root config me use karna"
+    ],
+    "depth": "Modules reusable Terraform code hain — wheel reinvent mat karo. Registry ke verified modules use karo (HashiCorp-partnered). Version pin karo modules ke liye — latest pin mat karo production me.",
+    "resources": [
+      "HashiCorp Terraform tutorials (developer.hashicorp.com/terraform)"
+    ],
+    "deliverable": "Community VPC module use karo Terraform me, apply karo — module call GitHub push"
+  },
+  {
+    "day": 68,
+    "date": "2026-09-30",
+    "week": 10,
+    "phase": "P4 · IaC+Capstone",
+    "title": "Terraform VPC Network",
+    "target": "TF se VPC module ke saath network banao",
+    "time": "1-2 hr",
+    "subtopics": [
+      "VPC module se public + private subnets create karna",
+      "Internet Gateway aur Route Tables module se",
+      "EC2 instance VPC ke andar deploy karna Terraform se",
+      "Security group VPC reference karna",
+      "terraform output se VPC ID aur subnet IDs print karna"
+    ],
+    "depth": "Full VPC + EC2 Terraform me banana ek real infrastructure task hai. Module se banao — manual se zyada fast aur repeatable hai. Sab khatam hone ke baad terraform destroy zaroor karo AWS charges ke liye.",
+    "resources": [
+      "HashiCorp Terraform tutorials (developer.hashicorp.com/terraform)"
+    ],
+    "deliverable": "VPC + EC2 Terraform se deploy karo, terraform output screenshot, phir destroy karo"
+  },
+  {
+    "day": 69,
+    "date": "2026-10-01",
+    "week": 10,
+    "phase": "P4 · IaC+Capstone",
+    "title": "Ansible Basics Awareness",
+    "target": "Ansible awareness: provisioning vs config mgmt. Ek playbook try karo",
+    "time": "1-2 hr",
+    "subtopics": [
+      "Terraform vs Ansible: infrastructure vs configuration management",
+      "Ansible inventory file — hosts define karna",
+      "Playbook YAML structure: hosts, tasks, modules",
+      "ansible.builtin.apt ya yum module se package install",
+      "Ansible agentless hai — sirf SSH chahiye"
+    ],
+    "depth": "Ansible deep dive mat karo — sirf concept aur ek simple playbook karo. Job description me Ansible agar hai toh zyada time do, warna awareness kaafi hai. Terraform + Ansible combo common hai real world me.",
+    "resources": [
+      "HashiCorp Terraform tutorials (developer.hashicorp.com/terraform)"
+    ],
+    "deliverable": "Ek simple Ansible playbook: localhost pe nginx install karo — playbook.yml GitHub push"
+  },
+  {
+    "day": 70,
+    "date": "2026-10-02",
+    "week": 10,
+    "phase": "P4 · IaC+Capstone",
+    "title": "Week 10 Revision + Terraform Cleanup",
+    "target": "Revision + TF cheatsheet + SAB DESTROY karo (cost safety!)",
+    "time": "1 hr",
+    "subtopics": [
+      "Terraform Week 10 all concepts recap",
+      "Terraform cheatsheet: 15 common commands",
+      "terraform destroy --auto-approve se sab nuke karo",
+      "AWS console me verify karo koi resource nahi bacha",
+      "Capstone project planning: architecture decide karo"
+    ],
+    "depth": "terraform destroy mandatory hai aaj — cost safety. AWS billing alert check karo. Capstone ka architecture aaj decide karo taaki kal se seedha start ho sake. Terraform cheatsheet real commands ke saath likho.",
+    "resources": [
+      "HashiCorp Terraform tutorials (developer.hashicorp.com/terraform)"
+    ],
+    "deliverable": "TF cheatsheet GitHub push + AWS $0 billing confirmation screenshot"
+  },
+  {
+    "day": 71,
+    "date": "2026-10-03",
+    "week": 11,
+    "phase": "P4 · IaC+Capstone",
+    "title": "Capstone: Infrastructure Provisioning",
+    "target": "CAPSTONE START: TF se infra provision (VPC + EC2/EKS)",
+    "time": "3-4 hr",
+    "subtopics": [
+      "Capstone architecture finalize karo: VPC + EC2 ya minikube",
+      "Terraform se VPC + public subnet + security group create karna",
+      "EC2 ya EKS node provision karna code se",
+      "Remote state backend: S3 bucket + DynamoDB lock",
+      "capstone/ folder structure: terraform/, k8s/, .github/"
+    ],
+    "depth": "Capstone me remote state backend use karo — S3 + DynamoDB locking production practice hai. EKS expensive hai — EC2 pe minikube ya kind se K8s simulate karo free me. Infra code clean aur modular rakho.",
+    "resources": [
+      "HashiCorp Terraform tutorials (developer.hashicorp.com/terraform)",
+      "kubernetes.io/docs Tasks"
+    ],
+    "deliverable": "Capstone infra Terraform se live — terraform output me IPs/endpoints, GitHub repo structure set"
+  },
+  {
+    "day": 72,
+    "date": "2026-10-04",
+    "week": 11,
+    "phase": "P4 · IaC+Capstone",
+    "title": "Capstone: App Deploy + CI Pipeline",
+    "target": "Capstone: app deploy — K8s manifests/Helm + GitHub Actions pipeline. LinkedIn post #12",
+    "time": "3-4 hr",
+    "subtopics": [
+      "Capstone app K8s Helm chart se deploy karna",
+      "GitHub Actions workflow: test → build → push → deploy",
+      "kubectl apply ya helm upgrade in GitHub Actions",
+      "kubeconfig secret GitHub Actions me store karna",
+      "End-to-end: code push se auto-deploy to cluster"
+    ],
+    "depth": "Full GitOps pipeline — code push hone pe cluster me automatically update hona chahiye. kubeconfig secret sensitive hai — carefully handle karo. Yeh ek professional-grade CI/CD hai portfolio ke liye.",
+    "resources": [
+      "GitHub Actions official docs (docs.github.com/actions)",
+      "kubernetes.io/docs Tasks"
+    ],
+    "deliverable": "GitHub push se auto-deploy working — pipeline green screenshot + LinkedIn post #12"
+  },
+  {
+    "day": 73,
+    "date": "2026-10-05",
+    "week": 11,
+    "phase": "P4 · IaC+Capstone",
+    "title": "Capstone: Full Pipeline Automation",
+    "target": "Capstone: pipeline me build + push + deploy full automate",
+    "time": "1-2 hr",
+    "subtopics": [
+      "Pipeline stages: lint → unit test → docker build → ECR push → K8s deploy",
+      "Environment-based deployment: staging vs prod branch",
+      "Rollback strategy in pipeline — helm rollback on failure",
+      "Pipeline notification: Slack ya email on failure",
+      "pipeline debug: kisi ek step ko fail karke fix karo"
+    ],
+    "depth": "Pipeline me failure notification lagana professional hai — production me agar deploy fail ho toh alert aana chahiye. Rollback automatic rakho — helm rollback ek command ka kaam hai.",
+    "resources": [
+      "GitHub Actions official docs (docs.github.com/actions)"
+    ],
+    "deliverable": "Full automated pipeline with rollback capability — pipeline YAML GitHub push, ek failure demo video/screenshot"
+  },
+  {
+    "day": 74,
+    "date": "2026-10-06",
+    "week": 11,
+    "phase": "P4 · IaC+Capstone",
+    "title": "Capstone: Datadog Monitoring",
+    "target": "Capstone: Datadog lagao — agent via Helm, dashboard + monitors (FULL CIRCLE!)",
+    "time": "1-2 hr",
+    "subtopics": [
+      "Datadog Helm chart se K8s cluster pe deploy karna",
+      "API key Kubernetes Secret me store karna",
+      "Capstone app ke liye custom dashboard banana",
+      "4 Golden Signals monitors set karna with alerts",
+      "Live Containers aur Kubernetes Explorer verify karna"
+    ],
+    "depth": "Yeh full circle moment hai — Linux se start kiya, ab Datadog se K8s monitor kar rahe ho. Datadog API key Secret me rakho — YAML me hardcode mat karo. Dashboard screenshot capstone README me add karo.",
+    "resources": [
+      "Datadog Learning Center (learn.datadoghq.com)",
+      "kubernetes.io/docs Tasks"
+    ],
+    "deliverable": "Datadog Helm deploy karo, Live Containers screenshot, Golden Signals dashboard screenshot — README me add karo"
+  },
+  {
+    "day": 75,
+    "date": "2026-10-07",
+    "week": 11,
+    "phase": "P4 · IaC+Capstone",
+    "title": "Capstone: Alerting + Runbook",
+    "target": "Capstone: alerting + runbook document likho (SRE thinking dikhao)",
+    "time": "1-2 hr",
+    "subtopics": [
+      "Alert thresholds decide karna — kya meaningful hai",
+      "On-call runbook structure: symptom, cause, fix steps",
+      "Ek real alert simulate karo (CPU spike ya memory leak)",
+      "Alert ko Datadog me acknowledge aur resolve karna",
+      "Postmortem format: what happened, why, how to prevent"
+    ],
+    "depth": "Runbook SRE ka ek core document hai — jab alert aaye toh on-call kya kare. Practical likhna — steps clear hone chahiye 2 AM pe bhi. Postmortem blameless hona chahiye, process fix pe focus.",
+    "resources": [
+      "Datadog Learning Center (learn.datadoghq.com)"
+    ],
+    "deliverable": "Capstone runbook document GitHub push — symptom, cause, fix, escalation steps included"
+  },
+  {
+    "day": 76,
+    "date": "2026-10-08",
+    "week": 11,
+    "phase": "P4 · IaC+Capstone",
+    "title": "Capstone: README + Architecture Diagram",
+    "target": "Capstone: architecture diagram + killer README + demo GIF",
+    "time": "1-2 hr",
+    "subtopics": [
+      "Architecture diagram: Terraform infra + K8s + CI/CD + Datadog saath me",
+      "README sections: overview, architecture, tech stack, how to run, monitoring",
+      "Demo GIF: deploy ya monitoring karte hue — Loom ya ttyrec se record karo",
+      "GitHub topics add karo: devops, kubernetes, terraform, datadog",
+      "Badges: build status, Docker Hub, last commit"
+    ],
+    "depth": "Architecture diagram ek pura DevOps story batata hai. Demo GIF recruiter ko impress karta hai — 30-60 second ka ho. README 5 minute me setup possible banaye — clear instructions.",
+    "resources": [
+      "GitHub Actions official docs (docs.github.com/actions)"
+    ],
+    "deliverable": "Capstone README with architecture diagram + demo GIF published on GitHub — shareable link"
+  },
+  {
+    "day": 77,
+    "date": "2026-10-09",
+    "week": 11,
+    "phase": "P4 · IaC+Capstone",
+    "title": "Capstone Publish + LinkedIn Post",
+    "target": "Capstone PUBLISH + BIG LinkedIn post #13 (architecture ke saath)",
+    "time": "1 hr",
+    "subtopics": [
+      "GitHub repo final review — README, LICENSE, .gitignore",
+      "LinkedIn post: project story — problem, solution, tech used, learnings",
+      "Architecture diagram image LinkedIn pe attach karna",
+      "Tags: #DevOps #Kubernetes #Terraform #Datadog #GitHub",
+      "Connections tag karo jo journey follow kar rahe the"
+    ],
+    "depth": "LinkedIn post storytelling format me likho — sirf tech list nahi. Kya seekha, kya struggle hua, aage kya hai. Architecture diagram visually strong impact karta hai. Yeh post tumhara biggest professional signal hai.",
+    "resources": [
+      "GitHub Actions official docs (docs.github.com/actions)"
+    ],
+    "deliverable": "Capstone GitHub link + LinkedIn post published with architecture image — post URL save karo"
+  },
+  {
+    "day": 78,
+    "date": "2026-10-10",
+    "week": 12,
+    "phase": "P4 · IaC+Capstone",
+    "title": "Resume Rebuild + Job Profiles",
+    "target": "Resume rebuild: projects + Datadog production experience highlight. Naukri/LinkedIn/Instahyre update",
+    "time": "3-4 hr",
+    "subtopics": [
+      "Resume me Projects section: 3 projects with tech stack, impact, GitHub link",
+      "Experience section: Datadog production work ko quantify karo",
+      "Skills section: Linux, Docker, K8s, Terraform, CI/CD, Datadog, AWS",
+      "ATS-friendly format: plain keywords, no tables",
+      "Naukri, LinkedIn, Instahyre profiles update karna"
+    ],
+    "depth": "Resume me numbers use karo — 'deployed 5 services' not 'deployed services'. Datadog production experience unique differentiator hai — highlight karo. ATS (Applicant Tracking System) ke liye job description ke keywords match karo.",
+    "resources": [
+      "roadmap.sh/devops (Career guidance)"
+    ],
+    "deliverable": "Updated resume PDF + Naukri/LinkedIn profile updated — resume GitHub pe (personal info redact karo)"
+  },
+  {
+    "day": 79,
+    "date": "2026-10-11",
+    "week": 12,
+    "phase": "P4 · IaC+Capstone",
+    "title": "Interview Prep: Linux+Docker+CI/CD",
+    "target": "Interview prep: Linux/Docker/CI-CD top 50 questions. LinkedIn post #14",
+    "time": "3-4 hr",
+    "subtopics": [
+      "Linux top questions: process management, permissions, networking, scripting",
+      "Docker top questions: image vs container, networking, volumes, compose",
+      "CI/CD questions: pipeline stages, rollback, blue-green deployment",
+      "Behavioral questions: DevOps challenges faced, how you debugged",
+      "STAR method se answers prepare karo (Situation, Task, Action, Result)"
+    ],
+    "depth": "Top 50 questions khud likh ke answers prepare karo — copy-paste mat karo. Apne real experience se examples do. Mock interview practice critical hai — aaj se start karo.",
+    "resources": [
+      "roadmap.sh/devops (Interview section)"
+    ],
+    "deliverable": "Top 50 Q&A file GitHub push + LinkedIn post #14 interview prep journey pe"
+  },
+  {
+    "day": 80,
+    "date": "2026-10-12",
+    "week": 12,
+    "phase": "P4 · IaC+Capstone",
+    "title": "Interview Prep: K8s + Observability",
+    "target": "Interview prep: K8s scenarios + observability questions (aapka STRONG zone)",
+    "time": "1-2 hr",
+    "subtopics": [
+      "K8s scenarios: Pod crash debug, scaling issue, network policy",
+      "CrashLoopBackOff, OOMKilled exact answer kaisa dena",
+      "Observability: metrics vs logs vs traces, SLI/SLO/SLA",
+      "Datadog-specific: monitors, dashboards, DogStatsD use case",
+      "System design: monitoring pipeline design kaise answer karna"
+    ],
+    "depth": "K8s aur Datadog tumhara strongest point hai — yahan confident raho. Scenario questions me step-by-step debug process bolna — 'pehle kubectl describe, phir logs, phir exec'. Datadog production experience real hai — usse interview me use karo.",
+    "resources": [
+      "Datadog Learning Center (learn.datadoghq.com)",
+      "roadmap.sh/devops"
+    ],
+    "deliverable": "K8s + Observability Q&A file GitHub push — 20 questions with detailed answers"
+  },
+  {
+    "day": 81,
+    "date": "2026-10-13",
+    "week": 12,
+    "phase": "P4 · IaC+Capstone",
+    "title": "Mock Interview Practice",
+    "target": "Mock interview (dost/AI se) + gaps note karo",
+    "time": "1-2 hr",
+    "subtopics": [
+      "Mock interview: 30-45 minute full interview simulate karo",
+      "Technical questions + behavioral questions dono cover karo",
+      "Recording karo ya notes lo — gap identify karo",
+      "Filler words kam karo (um, uh) — confident tone",
+      "Gap areas: 1-2 din aur practice karo weak topics pe"
+    ],
+    "depth": "Mock interview nervous karta hai — yeh normal hai. Recording sun ke apni improvement points dekhna. Gaps jo milti hain unhe seriously lo — do aur din hain.",
+    "resources": [
+      "roadmap.sh/devops"
+    ],
+    "deliverable": "Mock interview recording ya notes — gaps list file with action items"
+  },
+  {
+    "day": 82,
+    "date": "2026-10-14",
+    "week": 12,
+    "phase": "P4 · IaC+Capstone",
+    "title": "Job Applications + Referrals",
+    "target": "15 target companies list (product/GCC) + 5 applications + 3 referral requests",
+    "time": "1-2 hr",
+    "subtopics": [
+      "Target companies research: product companies vs GCC DevOps roles",
+      "Naukri, LinkedIn, Instahyre pe apply karna",
+      "Referral message draft karna — specific aur short",
+      "JD match: skills gap check karo before applying",
+      "Application tracking spreadsheet banana"
+    ],
+    "depth": "Referral se interview rate 3-5x zyada hota hai — network use karo. JD me 80% skills match ho toh apply karo — 100% ka wait mat karo. Tracking sheet se follow-ups manage karo.",
+    "resources": [
+      "roadmap.sh/devops (Career section)"
+    ],
+    "deliverable": "Application tracking sheet: 15 companies, 5 applied, 3 referral messages sent — file GitHub push"
+  },
+  {
+    "day": 83,
+    "date": "2026-10-15",
+    "week": 12,
+    "phase": "P4 · IaC+Capstone",
+    "title": "Freelance Profile Setup",
+    "target": "Freelance seed: LinkedIn/Upwork profile 'Datadog Implementation Specialist' + 2 proposals draft",
+    "time": "1-2 hr",
+    "subtopics": [
+      "Upwork profile: Datadog Implementation Specialist title",
+      "Upwork overview: experience, projects, what you offer",
+      "LinkedIn headline update: DevOps | Datadog | Kubernetes",
+      "Proposal template banana: client-specific + value-focused",
+      "2 specific Upwork jobs pe proposals submit karna"
+    ],
+    "depth": "Freelance parallel income path hai — job search ke saath chalao. Upwork profile me portfolio projects ka link daalo. Proposal me client ka problem samjho aur solve karne ki bat karo — generic mat likhna.",
+    "resources": [
+      "roadmap.sh/devops"
+    ],
+    "deliverable": "Upwork profile live + 2 proposals sent — profile link + proposal screenshots save karo"
+  },
+  {
+    "day": 84,
+    "date": "2026-10-16",
+    "week": 12,
+    "phase": "P4 · IaC+Capstone",
+    "title": "Final Day: Review + Next 90 Days Plan",
+    "target": "FINAL DAY: 84-day review, agle 90 din ka plan (CKA target), CELEBRATE! 🎉",
+    "time": "1 hr",
+    "subtopics": [
+      "84-day journey review: kya seekha, kya achieve kiya",
+      "GitHub portfolio review: sab repos clean aur documented",
+      "CKA (Certified Kubernetes Administrator) exam plan banana",
+      "Next 90 days: CKA prep, more applications, freelance grow",
+      "Celebrate seriously — 84 din ka DevOps grind complete!"
+    ],
+    "depth": "Yeh sirf shuruat hai — 84 din me foundation solid ban gayi. CKA next milestone hai — 3-4 months aur chahiye. Apni journey ko document karo aur aage ke goals clear karo. Celebrate karo — deserved hai!",
+    "resources": [
+      "roadmap.sh/devops",
+      "KillerCoda (killercoda.com)"
+    ],
+    "deliverable": "84-day journey blog post ya LinkedIn article publish karo — next 90-day goals document GitHub push"
+  }
+]
